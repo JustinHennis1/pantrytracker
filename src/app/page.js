@@ -50,9 +50,9 @@
           justifyContent: 'flex-start',
           alignItems: 'center',
           gap: 2,
-          minHeight: '200vh',
+          minHeight: '150vh',
           width: '100%',
-          paddingTop: 20,
+          paddingTop: {xs: '300px', sm: '200px'},
         }}
       >
 

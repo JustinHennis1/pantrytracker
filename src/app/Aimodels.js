@@ -181,8 +181,8 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: {xs: '90vw', sm: '50vw'},
-        height: {xs: '90vh', sm: '50vh'},
+        width: {xs: '100vw', sm: '100vw'},
+        height: {xs: '100vh', sm: '100vh'},
         bgcolor: 'background.theme',
         border: '2px solid #000',
         BoxShadow: 24,
@@ -195,7 +195,7 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
 
     const photobuttonstyle = {
         position: 'absolute',
-        top: '80%',
+        top: '95%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         borderRadius: '10px',
@@ -233,20 +233,28 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
                                 Take a photo of your food
                                 </Typography>
                         <Camera ref={camera} />
+                        <Box flexDirection={'row'} sx={photobuttonstyle}>
                         <Button
                             onClick={handleTakePhoto}
-                            sx={photobuttonstyle}
                             variant="contained"
                         >
                             Take Photo
                         </Button>
+                        <Button
+                            onClick={handleCloseCamera}
+                            
+                            variant="contained"
+                        >
+                            Exit
+                        </Button>
                         </Box>
+                    </Box>
                 </Modal>
                 {/* End Camera */}
                 <Box>
                     <Tooltip title="Change AI model" enterDelay={1000} enterNextDelay={1000}>
                         <Button variant="contained" onClick={handleModelChange} sx={{ borderRadius: '10px', mr: 1, padding: '6px 10px' }}>
-                            <ChangeCircleIcon fontSize="small"/>
+                            <ChangeCircleIcon fontSize={isMobile ? 'small' : 'medium'}/>
                         </Button>
                     </Tooltip>
                     <Menu
@@ -261,7 +269,7 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
                     </Menu>
                     <Tooltip title="Open camera" enterDelay={1000} enterNextDelay={1000}>
                         <Button variant="contained" onClick={handleOpenCamera} sx={{ borderRadius: '10px', padding: '6px 10px' }}>
-                            <CameraAltIcon fontSize="small"/>
+                            <CameraAltIcon fontSize={isMobile ? 'small' : 'medium'}/>
                         </Button>
                     </Tooltip>
                 </Box>

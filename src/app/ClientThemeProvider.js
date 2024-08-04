@@ -3,6 +3,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
 import { Button, Box } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const darkTheme = createTheme({
   palette: {
@@ -78,7 +79,7 @@ const themes = {
 };
 
 export default function ClientThemeProvider({ children }) {
-  const [currentTheme, setCurrentTheme] = useState('light');
+  const [currentTheme, setCurrentTheme] = useState('dark');
 
   const handleThemeChange = (theme) => {
     setCurrentTheme(theme);
@@ -90,6 +91,7 @@ export default function ClientThemeProvider({ children }) {
 
   return (
     <ThemeProvider theme={themes[currentTheme]}>
+      <CssBaseline />
       <Box sx={{ position: 'fixed', top: 10, right: 10, zIndex: 1000 }}>
         <Button onClick={() => handleThemeChange('light')} sx={{ mr: 1 }}>Light</Button>
         <Button onClick={() => handleThemeChange('dark')} sx={{ mr: 1 }}>Dark</Button>

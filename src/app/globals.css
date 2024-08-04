@@ -40,6 +40,20 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+.max-width-container {
+  width: 100%;
+  max-width: 1200px; /* or whatever maximum width you prefer */
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1240px) { /* 1200px + 20px padding on each side */
+  .max-width-container {
+    padding: 0 20px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -105,3 +119,4 @@ a {
     color-scheme: dark;
   }
 }
+
