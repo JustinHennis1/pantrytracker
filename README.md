@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OndaShelf
 
-## Getting Started
+OndaShelf is an advanced Inventory Management System designed to revolutionize how you manage, analyze, and optimize your inventory. By leveraging cutting-edge Gemini AI models, OndaShelf can analyze images and generate recipes, offering a seamless integration of technology into your inventory management process.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **AI-Powered Image Analysis**: Utilizes Gemini AI models to analyze inventory images and automatically generate recipes.
+- **Real-time Inventory Tracking**: Keep track of your inventory with instant updates and notifications.
+- **User-friendly Interface**: Built with React and Material UI for a smooth and intuitive user experience.
+- **Secure and Scalable Backend**: Powered by Firebase for authentication, data storage, and cloud functions.
+- **Modern Web Technologies**: Developed with Next.js for server-side rendering and optimized performance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Next.js**: A React framework for production-ready applications with server-side rendering.
+- **Firebase**: Provides backend services like authentication, real-time database, and cloud functions.
+- **React**: A JavaScript library for building user interfaces.
+- **Material UI**: A popular React UI framework that offers a set of accessible and customizable design components.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+To get started with OndaShelf, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/JustinHennis1/pantrytracker.git
+    cd pantrytracker
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Set up environment**:
+    - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
+    - Enable authentication and Firestore in the Firebase console.
+    - Get Firebase API Key and set it in the `.env` file at the root directory
+    - Get a Gemini API Key and set it in the `.env` file at the root directory
 
-## Deploy on Vercel
+4. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Open your browser** and navigate to `http://localhost:3000` to view OndaShelf.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage
+
+- **Upload Inventory Images**: Easily upload images of your inventory for analysis.
+- **Generate Recipes**: Let the AI analyze your inventory and provide recipe suggestions.
+- **Manage Inventory**: Add, edit, or remove inventory items effortlessly.
+- **Track Inventory**: Stay updated with the latest inventory status and alerts.
+
+## Contributing
+
+We welcome contributions to OndaShelf! To contribute, please fork the repository, create a feature branch, and submit a pull request.
+
+## License
+
+OndaShelf is released under the [MIT License](LICENSE).
+
+## Contact
+
+For questions, suggestions, or issues, please contact [15hennisjustin@gmail.com].
+
+---
+
+Thank you for using OndaShelf! We hope it transforms your inventory management experience.
