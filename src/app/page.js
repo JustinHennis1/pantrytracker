@@ -50,7 +50,7 @@
           justifyContent: 'flex-start',
           alignItems: 'center',
           gap: 2,
-          minHeight: '150vh',
+          minHeight: {xs: '150vh', sm: '200vh', md: '150vh'},
           width: '100%',
           paddingTop: {xs: '300px', sm: '200px'},
         }}
@@ -63,18 +63,24 @@
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
+            flexDirection: { xs: 'column', sm: 'column', md: 'row' },
             justifyContent: 'space-between',
             alignItems: 'center',
-            gap: 2,
+            paddingRight: 2,
             width: '100%',
             height: recipes.length === 0 ? '80vh' : '100%',
-            bgcolor: recipes.length === 0 ? 'background.default' : 'background.default',
+            bgcolor: 'background.default',
+            
             
           }}
         >
+          <Box sx={{marginTop: {xs:'100px', sm: '150px'}}}></Box>
+
           {/* Inventory component */}
           <Inventory length={recipes.length} triggerUpdate={triggerUpdate}/>
+
+          <Box sx={{marginTop: {xs:'150px', sm: '200px'}}}></Box>
+
           {/* AIModels component */}
           <AIModels setNewRecipe={handleNewRecipe} refreshInventory={refreshInventory} />
 
@@ -92,7 +98,7 @@
           padding={5}
         
          
-          margin={2 } // Added to center horizontally
+          margin={'auto'} 
           >
             <Box
               width="100%"
@@ -143,6 +149,7 @@
           alignItems: 'center',
           gap: 2,
           minHeight: '5vh', // Decreased from 10vh to 5vh
+          margin: 'auto',
           width: '100%',
         }}
       >
@@ -155,6 +162,7 @@
             alignItems: 'stretch',
             gap: 2,
             width: '100%',
+           
           }}
         >
         
@@ -169,6 +177,7 @@
           flexDirection={'column'}
           bgcolor={'background.theme'}
           height="200px"
+          margin= {'auto'}
           >
             <Box
               width="100%"
@@ -213,7 +222,8 @@
             display={'flex'} 
             flexDirection={'column'}
             bgcolor={'background.theme'}
-            height="200px"
+            height={"200px"}
+            margin= {'auto'}
           >
             <Box
               width="100%"

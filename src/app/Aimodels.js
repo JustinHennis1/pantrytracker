@@ -160,19 +160,12 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
     }, [camera, setImage, handleCloseCamera, processImage]);
 
     useEffect(() => {
-        let isMounted = true;
-
         const runProcessImage = async () => {
             if (image) {
                 await processImage();
             }
         };
-
         runProcessImage();
-
-        return () => {
-            isMounted = false;
-        };
     }, [image, processImage]);
 
 
@@ -216,10 +209,9 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
                 alignItems={'center'}
                 paddingX={8}
                 paddingY={3}
+                
             >
-                <Typography variant={isMobile ? 'h6' : 'h4'} color={'text.primary'} textAlign={'center'}>
-                    AI Models
-                </Typography>
+                
                 {/* Camera */}
 
                     <Modal
@@ -251,7 +243,19 @@ export default function AIModels({setNewRecipe, refreshInventory}) {
                     </Box>
                 </Modal>
                 {/* End Camera */}
-                <Box>
+                <Box
+                width="100%"
+                height="100px"
+                bgcolor='background.theme'
+                borderRadius={'16px 16px 0 0'}
+                display={'flex'}
+                justifyContent={'space-between'}
+                alignItems={'center'}
+                paddingX={5}
+                paddingY={2}>
+                <Typography variant={isMobile ? 'h6' : 'h4'} color={'text.primary'} textAlign={'center'}>
+                    AI Models
+                </Typography>
                     <Tooltip title="Change AI model" enterDelay={1000} enterNextDelay={1000}>
                         <Button variant="contained" onClick={handleModelChange} sx={{ borderRadius: '10px', mr: 1, padding: '6px 10px' }}>
                             <ChangeCircleIcon fontSize={isMobile ? 'small' : 'medium'}/>
